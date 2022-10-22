@@ -24,15 +24,17 @@ void insert()  // function to insert at first location
     p = createnode();
     printf("\nenter the number to insert");
     scanf("%d", &p->info);
+    struct node *temp;
     p->link = NULL;
     if (start == NULL)
     {
         start = p;
+        temp=start;
     }
     else
     {
-        p->link = start;
-        start = p;
+       temp->link = p;
+       temp = temp->link;
     }
 }
 ///////////////////////////////////////////////////////////
